@@ -9,6 +9,11 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{route("home")}}">Home</a>
         </li>
+        @if (session("client_login"))
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{route("user.show",base64_encode(session("client_login") ?? 0))}}">Profile</a>
+        </li>
+        @endif
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="{{route("home")}}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
@@ -21,6 +26,7 @@
       <div class="d-flex">
         <a href="{{route("login")}}" class="btn btn-outline-success mx-1">Login</a>
         <a href="{{route("user.create")}}" class="btn btn-outline-success mx-1">Register</a>
+
       </div>
     </div>
   </div>

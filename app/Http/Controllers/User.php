@@ -28,7 +28,7 @@ class User extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $request->all();
     }
 
     /**
@@ -36,7 +36,11 @@ class User extends Controller
      */
     public function show(string $id)
     {
-        //
+        if (session("client_login")) {
+            return view("profile");
+        } else {
+            return redirect(route("home"));
+        }
     }
 
     /**
