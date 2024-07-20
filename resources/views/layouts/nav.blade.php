@@ -24,8 +24,13 @@
         </li>
       </ul>
       <div class="d-flex">
+        @if (session("client_login"))
+        <a href="{{route("logout")}}" class="btn btn-outline-danger mx-1">Logout</a>
+        @else
         <a href="{{route("login")}}" class="btn btn-outline-success mx-1">Login</a>
         <a href="{{route("user.create")}}" class="btn btn-outline-success mx-1">Register</a>
+        @endif
+
 
       </div>
     </div>
