@@ -2,7 +2,7 @@
 
 use GuzzleHttp\Promise\Create;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\User;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('home');
@@ -11,7 +11,7 @@ Route::get('login', function () {
     return view('login');
 })->name("login");
 
-Route::resource("user", User::class);
+Route::resource("user", UserController::class);
 
 // Route::middleware([
 //     'auth:sanctum',

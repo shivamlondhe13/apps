@@ -12,16 +12,19 @@ class b_textarea extends Component
     public $value;
     public $label;
     public $id;
+    public $required;
     /**
      * Create a new component instance.
      */
-    public function __construct($name = "", $label = "", $id = "", $value = "")
+    public function __construct($name = "", $label = "", $id = "", $value = "", $required = "")
     {
         $this->name = $name;
         $this->value = $value;
         $this->id = $id;
         $this->label = $label;
+        $this->required = $required;
     }
+
 
     /**
      * Get the view / contents that represent the component.

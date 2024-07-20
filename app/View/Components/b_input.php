@@ -13,17 +13,20 @@ class b_input extends Component
     public $id;
     public $label;
     public $value;
+    public $required;
     /**
      * Create a new component instance.
      */
-    public function __construct($name = "", $type = "text", $id = "", $label = "", $value = "")
+    public function __construct($name = "", $type = "text", $id = "", $label = "", $value = "", $required = "")
     {
         $this->name = $name;
         $this->type = $type;
         $this->id = $id;
         $this->label = $label;
         $this->value = $value;
+        $this->required = $required;
     }
+
 
     /**
      * Get the view / contents that represent the component.
