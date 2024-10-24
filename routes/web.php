@@ -15,5 +15,6 @@ Route::resource("user", UserController::class);
 Route::get("logout", [LogoutController::class, "index"])->name("logout");
 
 //hello
+//hello2
 
 
