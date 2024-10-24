@@ -14,4 +14,6 @@ Route::post('login/check', [LoginController::class, "check"])->name("login.check
 Route::resource("user", UserController::class);
 Route::get("logout", [LogoutController::class, "index"])->name("logout");
 
+//hello
+
 
