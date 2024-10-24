@@ -21,7 +21,7 @@ class LoginController extends Controller
     if (count($user_row) == 0) {
     } else {
       if ($req["pass"] == $user_row[0]->pass) {
-        session(["client_login" => "true", "client_id" => base64_encode($user_row[0]->id)]);
+        $request->session()->put(["client_login" => "true", "client_id" => base64_encode($user_row[0]->id)]);
         return redirect(route("home"));
       }
     }
